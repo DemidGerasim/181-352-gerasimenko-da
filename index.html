@@ -7,147 +7,131 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
   <script type="text/javascript"></script>
   <script>
-    $(function() {
-        $(window).on("scroll resize", function() {
-            var o = $(window).scrollTop() / ($(document).height() - $(window).height());
-            $(".progress-bar").css({
-                "width": (100 * o | 0) + "%"
-            });
-        })
-    });
+  $(function() {
+    $(window).on("scroll resize", function() {
+      var o = $(window).scrollTop() / ($(document).height() - $(window).height());
+      $(".progress-bar").css({
+        "width": (100 * o | 0) + "%"
+      });
+    })
+  });
 </script>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  <!-- Required meta tags -->
-  <meta charset="utf-8" http-equiv="Cache-Control" content="no-cache">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Required meta tags -->
+<meta charset="utf-8" http-equiv="Cache-Control" content="no-cache">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <title>Парк</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css" type="text/css"/>
+<title>Парк</title>
 </head>
 
-<body class="unselectable">
-  <div class="progress">
-    <div class="progress-container">
-      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-      </div>
-    </div>
-  </div>
+<body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarColor03">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
   </header>
 
   <main role="main" class="container">
-    <div class="jumbotron">
-      <h1>Название игры: Парк</h1>
-      <h2>Разработчик: Демид Герасименко</h2>
-      <h3>Группа: 181-352</h3>
-      <h4>Вариант: #1</h4>
-    </div>
 
-    <div class=" border-success my-4">
-      <div class="card-header text-white bg-success">Авторизация</div>
-      <div class="card-body">
-        <form name="AccInput" class="container" method="post" action="/login/">
-          <table>
-            <tr>
-              <td><label><b>Login:</b></label></td>
-              <td><input placeholder="Введите логин" type="text" name="login"></td>
-              <td><input type="BUTTON" value=" Старт " onclick="login()" height="40" width="50"></td>
-            </tr>
-            <tr>
-              <td><label><b>Password:</b></label></td>
-              <td><input placeholder="Введите пароль" type="text" name="password"></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="mx-auto text-center">
-                  <button class="btn border-success btn-lg" data-toggle="modal" data-target="#exampleModal">Восстановление</button>
-                </div>
-              <td>
-                <div class="mx-auto text-center">
-                  <button class="btn border-success btn-lg" data-toggle="modal" data-target="#exampleModal2">Регистрация</button>
-                </div>
-            </tr>
-          </table>
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form id="recovery">
-                    <div class="form-group">
-                      <label for="email">Ваш E-mail для восстановления:</label>
-                      <input id="email" class="form-control" name="email" required="" type="email" placeholder="example@mail.ru">
-                    </div>
-                    <input type="button" value="Отправить" class="btn btn-success"></input>
-                  </form>
-                </div>
+    <div class="jumbotron"
+    <h1>Название игры: Park</h1>
+    <h2>Разработчик: Demid Gerasimenko</h2>
+    <h3>Группа: 181-352</h3>
+    <h4>Вариант: №1</h4>
+  </div>
+
+  <div class=" border-success my-4">
+    <div class="card-header text-white bg-success">Авторизация</div>
+    <div class="card-body">
+      <form name="AccInput" class="container" method="post" action="/login/">
+        <table>
+          <tr>
+            <td><label><b>Login:</b></label></td>
+            <td><input placeholder="Введите логин" type="text" name="login"></td>
+            <td><input type="BUTTON" value=" Старт " onclick="login()" height="40" width="50"></td>
+          </tr>
+          <tr>
+            <td><label><b>Password:</b></label></td>
+            <td><input placeholder="Введите пароль" type="text" name="password"></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="mx-auto text-center">
+                <button class="btn border-success btn-lg" data-toggle="modal" data-target="#exampleModal2">Регистрация</button>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
               </div>
             </div>
           </div>
-          <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form id="Registr">
-                    <div class="form-group">
-                      <label for="LOG">Логин:</label>
-                      <input id="LOG" class="form-control" name="LOG" required="" type="text" placeholder="afasfafawf">
-                    </div>
-                    <div class="form-group">
-                      <label for="PAS">Пароль:</label>
-                      <input id="PAS" class="form-control" name="PAS" required="" type="text" placeholder="PaSSword123">
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Ваш E-mail:</label>
-                      <input id="email" class="form-control" name="email" required="" type="email" placeholder="example@mail.ru">
-                    </div>
-                    <div class="form-group form-check">
-                      <input id="check" class="form-check-input" checked="" type="checkbox">
-                      <label class="form-check-label" for="check">Нажать если все ок )</label>
-                    </div>
-                    <input type="button" value="Отправить" class="btn btn-success"></input>
-                  </form>
-                </div>
+        </div>
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="Registr">
+                  <div class="form-group">
+                    <label for="LOG">Логин:</label>
+                    <input id="LOG" class="form-control" name="LOG" required="" type="text" placeholder="afasfafawf">
+                  </div>
+                  <div class="form-group">
+                    <label for="PAS">Пароль:</label>
+                    <input id="PAS" class="form-control" name="PAS" required="" type="text" placeholder="PaSSword123">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Ваш E-mail:</label>
+                    <input id="email" class="form-control" name="email" required="" type="email" placeholder="example@mail.ru">
+                  </div>
+                  <input type="button" value="Отправить" class="btn btn-success"></input>
+                </form>
               </div>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
-  </main>
+  </div>
+</main>
+
+<div class="card border-success my-4">
+  <div class="card-header text-white bg-success">Мини-галерея</div>
+  <div class="card-body">
+
+<main class="cards">
+  <img src="images/ducks-2680162__480.png" alt="Sample photo">
+  <img src="images/squirrel_003.png" alt="Sample photo">
+  <img src="images/purepng.com-duckbirdsflyanimals-631522936588ugrnf.png" alt="Sample photo">
+  <img src="images/shrubs-bush-png-image-42049-2000.png" alt="Sample photo">
+  <img src="images/flower-bushes-png-1.png" alt="Sample photo">
+  <img src="images/ecosystem-fish-pond-la.jpg" alt="Sample photo">
+  <img src="images/park-1495812_1280.jpg" alt="Sample photo">
+</main>
+</div>
+</div>
+
 </body>
 
 </html>
